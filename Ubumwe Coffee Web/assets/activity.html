@@ -1,0 +1,139 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>活動記録 - Ubumwe Coffee</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <!-- メインCSS -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <style>
+        body {
+            background: #f8f5f2;
+        }
+        .swiper {
+            width: 100%;
+            max-width: 900px;
+            margin: 40px auto;
+            padding-bottom: 50px;
+        }
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .swiper-slide img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            transition: transform 0.8s ease;
+        }
+        .swiper-slide img:hover {
+            transform: scale(1.03);
+        }
+        .swiper-button-prev,
+        .swiper-button-next {
+            color: #5a4634;
+        }
+        .swiper-pagination-bullet {
+            background: #5a4634;
+            opacity: 0.7;
+        }
+        .swiper-pagination-bullet-active {
+            background: #d4a373;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="is-preload">
+
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            <header id="header">
+                <a href="index.html" class="logo"><strong>Ubumwe Coffee</strong></a>
+            </header>
+
+            <section>
+                <header class="major">
+                    <h1>活動記録</h1>
+                </header>
+                <p>Ubumwe Coffeeのこれまでの活動をスライドショーでご覧ください。</p>
+
+                <!-- Swiper -->
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="assets/images/activity1.jpg" alt="活動写真1"></div>
+                        <div class="swiper-slide"><img src="assets/images/activity2.jpg" alt="活動写真2"></div>
+                    </div>
+                    <!-- ページネーション -->
+                    <div class="swiper-pagination"></div>
+                    <!-- ナビボタン -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <div class="inner">
+
+            <!-- Menu -->
+            <nav id="menu">
+                <header class="major">
+                    <h2>Menu</h2>
+                </header>
+                <ul>
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="activity.html">活動記録</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+<!-- Swiper 設定 -->
+<script>
+    const swiper = new Swiper('.swiper', {
+        loop: true,
+        effect: 'fade',
+        fadeEffect: { crossFade: true },
+        speed: 1000,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        autoplay: {
+            delay: 3500,
+            disableOnInteraction: false,
+        },
+    });
+</script>
+
+<!-- Main JS -->
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
