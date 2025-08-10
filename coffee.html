@@ -1,205 +1,31 @@
-<!DOCTYPE HTML>
-<html lang="ja">
 <head>
   <meta charset="utf-8" />
   <title>コーヒーガイド | Ubumwe Coffee</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <!-- いまのリポ構成に合わせて（css がルート直下） -->
   <link rel="stylesheet" href="css/main.css" />
 </head>
-<body class="is-preload">
 
-  <!-- Wrapper -->
-  <div id="wrapper">
+<!-- 中略：wrapper / header は index.html と同じ構成のままでOK -->
 
-    <!-- Main -->
-    <div id="main">
-      <div class="inner">
-
-        <!-- Header -->
-        <header id="header">
-          <a href="index.html" class="logo"><strong>Ubumwe Coffee</strong></a>
-          <ul class="icons">
-            <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-            <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-            <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-          </ul>
-        </header>
-
-        <!-- Banner（ホームと同じ2カラム） -->
-        <section id="banner">
-          <div class="content">
-            <header>
-              <h1>コーヒーガイド</h1>
-              <p>ブルンジコーヒーの個性とおいしい淹れ方</p>
-            </header>
-            <p>
-              Ubumwe Coffee が扱うブルンジのコーヒーは、標高の高い冷涼な環境で育ち、
-              ベリーや柑橘、アプリコットを思わせるフルーティーな甘さと、すっきりした酸味が魅力です。
-              ここでは特徴と、はじめての方でも試しやすい基本のレシピをご紹介します。
-            </p>
-          </div>
-          <span class="image object">
-            <!-- バナー画像（右） -->
-            <img src="images/coffee.jpeg" alt="コーヒーの抽出イメージ" />
-          </span>
-        </section>
-
-        <!-- スペック -->
-        <section>
-          <header class="major">
-            <h2>ブルンジコーヒーの基本情報</h2>
-          </header>
-
-          <div class="features">
-            <article>
-              <span class="icon solid fa-flag"></span>
-              <div class="content">
-                <h3>原産国</h3>
-                <p>ブルンジ共和国</p>
-              </div>
-            </article>
-
-            <article>
-              <span class="icon solid fa-seedling"></span>
-              <div class="content">
-                <h3>品種</h3>
-                <p>ブルボン</p>
-              </div>
-            </article>
-
-            <article>
-              <span class="icon solid fa-mountain"></span>
-              <div class="content">
-                <h3>産地</h3>
-                <p>カヤンザ、ムインガ など</p>
-              </div>
-            </article>
-
-            <article>
-              <span class="icon solid fa-fire"></span>
-              <div class="content">
-                <h3>焙煎度合い</h3>
-                <p>中浅煎り（豆本来の香りと甘さが際立ちます）</p>
-              </div>
-            </article>
-          </div>
-
-          <p>
-            ブルンジは標高 1,731m と高く比較的冷涼な土地で、コーヒー栽培に適しています。
-            日中と夜間の寒暖差により成長がゆっくり進み、ぎゅっと糖がのることで、
-            ベリーや柑橘・アプリコットを思わせる甘さの伴うフルーティーな風味と、
-            すっきりした酸味が生まれます。
-          </p>
-
-          <p>
-            <strong>精製方法</strong>：
-            フルウォッシュド、セミウォッシュド、ナチュラル、ハニー など。
-            方法の違いによって香味が変わります。
-          </p>
-
-          <p>
-            世界全体におけるブルンジ産コーヒーのシェアは約 <strong>0.17%</strong>。
-            とても希少で、私たちはその魅力を丁寧に日本のみなさんへお届けしていきます。
-          </p>
-        </section>
-
-        <!-- 基本のレシピ（軽く） -->
-        <section>
-          <header class="major">
-            <h2>基本のハンドドリップ</h2>
-          </header>
-          <div class="posts">
-            <article>
-              <h3>粉・湯の目安</h3>
-              <p>コーヒー粉 15 g ／ お湯 230 ml（90〜93℃）</p>
-            </article>
-            <article>
-              <h3>抽出の流れ</h3>
-              <p>30秒蒸らし → 2〜3回に分けて注ぐ → 抽出 2:30〜3:00 で仕上げ。</p>
-            </article>
-          </div>
-        </section>
-
-        <!-- イベントの感想（説明文） -->
-        <section>
-          <header class="major">
-            <h2>イベントでのご感想</h2>
-          </header>
-          <p>
-            実際にイベントでお客様にコーヒーを飲んでいただき、以下のような味の評価をいただきました。
-            苦みが控えめで香りが高いといった声が多く寄せられています。
-          </p>
-        </section>
-
-        <!-- 味わいガイド画像（中央・適度な幅） -->
-        <section>
-          <div class="image fit" style="max-width: 720px; margin: 0 auto;">
-            <img src="images/guide.jpeg" alt="ブルンジコーヒーの味わいガイド">
-          </div>
-        </section>
-
-        <!-- お客様の声（ページ最後） -->
-        <section>
-          <header class="major">
-            <h2>お客様の声</h2>
-          </header>
-          <p><strong>「香りが華やか！」</strong><br>
-            ベリーっぽい香りがふわっと広がって、後味はすっきり。朝にぴったりでした。</p>
-          <p><strong>「苦みが少なくて飲みやすい」</strong><br>
-            酸味はあるけど嫌な感じじゃなくて、甘さがあって飲みやすかったです。</p>
-          <p><strong>「アイスでもおいしい」</strong><br>
-            浅めでもコクが出て、冷やしても香りがちゃんと残るのが良かった！</p>
-        </section>
-
-      </div>
-    </div>
-
-    <!-- Sidebar -->
-    <div id="sidebar">
-      <div class="inner">
-
-        <!-- Menu -->
-        <nav id="menu">
-          <header class="major">
-            <h2>Menu</h2>
-          </header>
-          <ul>
-            <li><a href="index.html">ホーム</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="gallery.html">ギャラリー</a></li>
-            <li><a href="coffee.html">コーヒーガイド</a></li>
-            <li><a href="burundi.html">ブルンジとは</a></li>
-          </ul>
-        </nav>
-
-        <!-- Contact -->
-        <section>
-          <header class="major">
-            <h2>お問い合わせ</h2>
-          </header>
-          <p>ご質問・ご連絡はこちらからお願いします。</p>
-          <ul class="contact">
-            <li class="icon solid fa-envelope"><a href="#">ubumwe@example.com</a></li>
-            <li class="icon solid fa-home">神奈川県横浜市〇〇〇〇</li>
-          </ul>
-        </section>
-
-        <!-- Footer -->
-        <footer id="footer">
-          <p class="copyright">&copy; Ubumwe Coffee. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-        </footer>
-
-      </div>
-    </div>
-
+<section id="banner">
+  <div class="content">
+    <header>
+      <h1>コーヒーガイド</h1>
+      <p>ブルンジコーヒーの個性とおいしい淹れ方</p>
+    </header>
+    <p>
+      Ubumwe Coffee が扱うブルンジのコーヒーは、標高の高い冷涼な環境で育ち、
+      ベリーや柑橘、アプリコットを思わせるフルーティーな甘さと、すっきりした酸味が魅力です。
+    </p>
   </div>
+  <span class="image object">
+    <img src="images/coffee.jpeg" alt="コーヒーの抽出イメージ">
+  </span>
+</section>
 
-  <!-- Scripts（js もルート直下） -->
-  <script src="js/jquery.min.js"></script>
-  <script src="js/browser.min.js"></script>
-  <script src="js/breakpoints.min.js"></script>
-  <script src="js/util.js"></script>
-  <script src="js/main.js"></script>
-</body>
-</html>
+<!-- body 最後も index.html と同じパスで -->
+<script src="js/jquery.min.js"></script>
+<script src="js/browser.min.js"></script>
+<script src="js/breakpoints.min.js"></script>
+<script src="js/util.js"></script>
+<script src="js/main.js"></script>
