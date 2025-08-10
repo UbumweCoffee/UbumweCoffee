@@ -1,50 +1,24 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-    <title>コーヒーガイド - Ubumwe Coffee</title>
+    <title>コーヒーガイド | Ubumwe Coffee</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <style>
-      /* お客さまの声（吹き出し） */
-      .testimonials { display: grid; gap: 1.25rem; margin-top: 2rem; }
-      .bubble {
-        position: relative;
-        background: #ffffff;
-        border: 1px solid rgba(0,0,0,0.08);
-        border-radius: 10px;
-        padding: 1rem 1.1rem 1rem 3.2rem;
-        box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+      /* バナー画像をホームに近い見た目に調整（高さ抑える） */
+      #banner .image.object img{
+        max-height: 420px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
       }
-      .bubble:before {
-        content: "“";
-        position: absolute;
-        left: 0.8rem;
-        top: 0.4rem;
-        font-size: 2.2rem;
-        line-height: 1;
-        opacity: .25;
-      }
-      .bubble:after {
-        /* 吹き出しのしっぽ */
-        content: "";
-        position: absolute;
-        left: 1.2rem;
-        bottom: -10px;
-        width: 16px;
-        height: 16px;
-        background: #ffffff;
-        border-left: 1px solid rgba(0,0,0,0.08);
-        border-bottom: 1px solid rgba(0,0,0,0.08);
-        transform: rotate(45deg);
-      }
-      .bubble .meta {
-        margin-top: .6rem;
-        font-size: .9rem;
-        opacity: .7;
-      }
-      @media (min-width: 800px){
-        .testimonials { grid-template-columns: 1fr 1fr; }
+      /* ページ内の単体画像は幅100%で綺麗に表示 */
+      .image.fit img{
+        width: 100%;
+        height: auto;
+        display: block;
       }
     </style>
   </head>
@@ -60,63 +34,104 @@
           <!-- Header -->
           <header id="header">
             <a href="index.html" class="logo"><strong>Ubumwe Coffee</strong></a>
+            <ul class="icons">
+              <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+              <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+              <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+            </ul>
           </header>
 
-          <!-- Page Title -->
+          <!-- 1) バナー（メイン写真） -->
+          <section id="banner">
+            <div class="content">
+              <header>
+                <h1>コーヒーガイド</h1>
+                <p>ブルンジコーヒーの個性とおいしい淹れ方</p>
+              </header>
+              <p>
+                Ubumwe Coffee が扱うブルンジのコーヒーは、標高の高い冷涼な環境で育ち、
+                ベリーや柑橘、アプリコットを思わせるフルーティーな甘さと、すっきりした酸味が魅力です。
+                ここでは特徴と、はじめての方でも試しやすい基本のレシピをご紹介します。
+              </p>
+            </div>
+            <span class="image object">
+              <img src="images/coffee.jpeg" alt="ブルンジコーヒーのメイン画像">
+            </span>
+          </section>
+
+          <!-- 2) ブルンジコーヒーの特徴（文章＋リスト） -->
           <section>
             <header class="major">
-              <h1>コーヒーガイド</h1>
+              <h2>ブルンジコーヒーの基本情報</h2>
             </header>
 
-            <!-- メイン写真 -->
-            <span class="image main">
-              <img src="images/coffee.jpeg" alt="Ubumwe Coffee のコーヒー" />
+            <div class="box">
+              <dl>
+                <dt>＜原産国＞</dt>
+                <dd>ブルンジ共和国</dd>
+
+                <dt>＜品種＞</dt>
+                <dd>ブルボン</dd>
+
+                <dt>＜産地＞</dt>
+                <dd>カヤンザ、ムインガ など</dd>
+
+                <dt>＜焙煎度合い＞</dt>
+                <dd>中浅煎り（豆本来の香りと甘さが際立ちます）</dd>
+
+                <dt>＜精製方法＞</dt>
+                <dd>フルウォッシュド／セミウォッシュド／ナチュラル／ハニー など（方法により風味が異なります）</dd>
+              </dl>
+            </div>
+
+            <p>
+              ブルンジは標高が約 1,731m と高く比較的冷涼な土地で、コーヒー栽培に適しています。
+              昼夜の寒暖差で成長がゆっくりになり、旨味が凝縮。ベリーや柑橘、アプリコットを思わせる
+              フルーティーな風味と、すっきりした酸味が特徴です。
+            </p>
+            <p>
+              世界全体におけるブルンジ産コーヒーのシェアは約 0.17% と希少。私たちはその魅力を、
+              日本の皆さんへ丁寧に届けていきます。
+            </p>
+          </section>
+
+          <!-- 3) 実際にイベントで… の文章 -->
+          <section>
+            <header class="major">
+              <h2>イベントでのご感想</h2>
+            </header>
+            <p>
+              実際にイベントでお客様にコーヒーを飲んでいただき、以下のような味の評価をいただきました。
+              苦みが控えめで香りが高いといった声が多く寄せられています。
+            </p>
+          </section>
+
+          <!-- 4) guide.jpeg 写真（本文下部に配置） -->
+          <section>
+            <span class="image fit">
+              <img src="images/guide.jpeg" alt="ブルンジコーヒーの味わいガイド">
             </span>
+          </section>
 
-            <!-- Coffee Details -->
-            <h2>ブルンジコーヒーの特徴</h2>
-            <ul>
-              <li><strong>原産国:</strong> ブルンジ共和国</li>
-              <li><strong>品種:</strong> ブルボン</li>
-              <li><strong>産地:</strong> カヤンザ、ムインガ など</li>
-              <li><strong>焙煎度合い:</strong> 中浅煎り</li>
-              <li><strong>精製方法:</strong> フルウォッシュド／セミウォッシュド／ナチュラル／ハニー（方法ごとに風味が変わります）</li>
-            </ul>
-
-            <p>
-              ブルンジは標高が約1,731mと高く比較的冷涼。日中と夜間の気温差で豆の成長がゆっくりになり、
-              ベリーや柑橘、アプリコットを思わせる甘さの伴うフルーティーな風味と、すっきりとした酸味が生まれます。
-              焙煎は浅煎り寄りで、豆本来の香りと甘さが際立つのが特徴です。
-            </p>
-
-            <p>
-              世界全体におけるブルンジ産コーヒーのシェアは約 0.17% の希少豆。
-              イベントの試飲でも「苦みが控えめで香りが高い」との声を多くいただいています。
-            </p>
-
-            <!-- お客さまの声（吹き出し） -->
+          <!-- 5) お客さまの声（最後に） -->
+          <section>
             <header class="major">
               <h2>お客さまの声</h2>
             </header>
-            <div class="testimonials">
-              <div class="bubble">
-                苦みが少なくて、後味がすごくクリーン。朝の一杯にぴったりでした。
-                <div class="meta">— 20代・女性（イベント来場者）</div>
-              </div>
-              <div class="bubble">
-                ベリーっぽい香りがふわっと立って、冷めても甘さが残るのが良いですね。
-                <div class="meta">— 30代・男性（コーヒー好き）</div>
-              </div>
-              <div class="bubble">
-                ミルクを入れなくても飲みやすい！酸味が爽やかでスイスイ飲めました。
-                <div class="meta">— 10代・学生</div>
-              </div>
-              <div class="bubble">
-                ナチュラルとウォッシュドで香りがかなり違って面白い。飲み比べおすすめ。
-                <div class="meta">— 40代・女性（リピーター）</div>
-              </div>
+            <div class="posts">
+              <article>
+                <h3>「香りが華やか！」</h3>
+                <p>ベリーっぽい香りがふわっと広がって、後味はすっきり。朝にぴったりでした。</p>
+              </article>
+              <article>
+                <h3>「苦みが少なくて飲みやすい」</h3>
+                <p>酸味はあるけど嫌な感じじゃなくて、甘さがあって飲みやすかったです。</p>
+              </article>
+              <article>
+                <h3>「アイスでもおいしい」</h3>
+                <p>浅めでもコクが出て、冷やしても香りがちゃんと残るのが良かった！</p>
+              </article>
             </div>
-
           </section>
 
         </div>
@@ -125,6 +140,13 @@
       <!-- Sidebar -->
       <div id="sidebar">
         <div class="inner">
+
+          <!-- Search -->
+          <section id="search" class="alt">
+            <form method="post" action="#">
+              <input type="text" name="query" id="query" placeholder="Search" />
+            </form>
+          </section>
 
           <!-- Menu -->
           <nav id="menu">
@@ -139,6 +161,18 @@
               <li><a href="burundi.html">ブルンジとは</a></li>
             </ul>
           </nav>
+
+          <!-- Contact -->
+          <section>
+            <header class="major">
+              <h2>お問い合わせ</h2>
+            </header>
+            <p>ご質問・ご連絡はこちらからお願いします。</p>
+            <ul class="contact">
+              <li class="icon solid fa-envelope"><a href="#">ubumwe@example.com</a></li>
+              <li class="icon solid fa-home">神奈川県横浜市〇〇〇〇</li>
+            </ul>
+          </section>
 
           <!-- Footer -->
           <footer id="footer">
@@ -156,6 +190,5 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
-
   </body>
 </html>
