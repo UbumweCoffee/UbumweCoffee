@@ -1,26 +1,131 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="ja">
 <head>
-  <title>ギャラリー - Ubumwe Coffee</title>
   <meta charset="utf-8" />
+  <title>Gallery | Ubumwe Coffee</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="css/main.css" />
+
+  <style>
+    /* 🌿ふんわりカフェ系背景 */
+    body {
+      background-color: #fdf8f3;
+      color: #4b3e2d;
+    }
+
+    h1 {
+      color: #a76b43;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      text-align: center;
+      color: #5b4a3a;
+      margin-bottom: 2rem;
+    }
+
+    /* ✨ギャラリーグリッド */
+    .gallery-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin: 0 auto;
+      max-width: 1000px;
+      padding: 1rem;
+    }
+
+    /* 各画像カード */
+    .gallery-container img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .gallery-container img:hover {
+      transform: scale(1.04);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    /* 🩶ふんわり枠 */
+    .photo-frame {
+      background: #fff;
+      border-radius: 14px;
+      padding: 0.5rem;
+    }
+  </style>
 </head>
-<body>
-  <div id="wrapper">
-    <div id="main">
-      <div class="inner">
-        <header id="header">
-          <a href="index.html" class="logo"><strong>Ubumwe Coffee</strong></a>
-        </header>
-        <section>
-          <header class="major">
-            <h2>ギャラリー</h2>
-          </header>
-          <p>ここに写真ギャラリーを追加予定！</p>
-        </section>
-      </div>
+
+<body class="is-preload">
+<div id="wrapper">
+
+  <!-- Main -->
+  <div id="main">
+    <div class="inner">
+
+      <!-- Header -->
+      <header id="header">
+        <a href="index.html" class="logo"><strong>Ubumwe Coffee</strong></a>
+      </header>
+
+      <!-- Hero -->
+      <section id="banner">
+        <div class="content">
+          <h1>Gallery</h1>
+          <p>Ubumwe Coffeeの活動・想いが詰まった写真たち。</p>
+        </div>
+      </section>
+
+      <!-- Gallery -->
+      <section>
+        <div class="gallery-container">
+          <div class="photo-frame"><img src="assets/images/coffee-pour.jpg" alt="コーヒーを淹れる様子"></div>
+          <div class="photo-frame"><img src="assets/images/top.jpg" alt="ブルンジのコーヒー豆"></div>
+          <div class="photo-frame"><img src="assets/images/guide1.jpg" alt="ドリップ1"></div>
+          <div class="photo-frame"><img src="assets/images/guide2.jpg" alt="ドリップ2"></div>
+          <div class="photo-frame"><img src="assets/images/guide3.jpg" alt="ドリップ3"></div>
+          <div class="photo-frame"><img src="assets/images/guide4.jpg" alt="ドリップ4"></div>
+          <div class="photo-frame"><img src="assets/images/guide5.jpg" alt="ドリップ5"></div>
+          <div class="photo-frame"><img src="assets/images/qanda.jpg" alt="Q&Aデザイン"></div>
+        </div>
+      </section>
+
     </div>
   </div>
+
+  <!-- Sidebar（共通メニュー） -->
+  <div id="sidebar">
+    <div class="inner">
+
+      <nav id="menu">
+        <header class="major"><h2>Menu</h2></header>
+        <ul>
+          <li><a href="index.html">ホーム</a></li>
+          <li><a href="About.html">About Us</a></li>
+          <li><a href="gallery.html">ギャラリー</a></li>
+          <li><a href="coffee.html">コーヒーガイド</a></li>
+          <li><a href="burundi.html">ブルンジとは</a></li>
+          <li><a href="qanda.html">Q&A</a></li>
+        </ul>
+      </nav>
+
+      <footer id="footer">
+        <p class="copyright">&copy; Ubumwe Coffee.</p>
+      </footer>
+    </div>
+  </div>
+</div>
+
+<!-- Scripts -->
+<script src="js/jquery.min.js"></script>
+<script src="js/browser.min.js"></script>
+<script src="js/breakpoints.min.js"></script>
+<script src="js/util.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
