@@ -5,8 +5,14 @@
   <title>Q&A | Ubumwe Coffee</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <link rel="stylesheet" href="css/main.css" />
+
   <style>
-    /* Q&Aカード用スタイル */
+    /* 🌿全体のふんわりベージュ背景 */
+    body {
+      background-color: #fffaf3;
+    }
+
+    /* Q&Aカードレイアウト */
     .qa-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -15,28 +21,34 @@
     }
 
     .qa-card {
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
       padding: 1.5rem;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
 
     .qa-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
     }
 
     .qa-card h3 {
       font-size: 1.1rem;
       margin-bottom: 0.8rem;
-      color: #c06a2b; /* コーヒーっぽい色 */
+      color: #b16836; /* コーヒー色 */
     }
 
     .qa-card p {
       font-size: 0.95rem;
       line-height: 1.6;
       color: #444;
+    }
+
+    /* ヒーロー画像ふんわり加工 */
+    .image.object img {
+      filter: brightness(1.05) contrast(1.05) saturate(0.95);
+      border-radius: 12px;
     }
   </style>
 </head>
@@ -53,7 +65,7 @@
         <a href="index.html" class="logo"><strong>Ubumwe Coffee</strong></a>
       </header>
 
-      <!-- Hero -->
+      <!-- Heroセクション -->
       <section id="banner">
         <div class="content">
           <header>
@@ -62,7 +74,7 @@
           </header>
         </div>
         <span class="image object">
-          <img src="images/guide1.jpg" alt="Q&Aイメージ" />
+          <img src="assets/images/qanda.jpg" alt="Q&Aページのメイン写真" />
         </span>
       </section>
 
@@ -75,22 +87,22 @@
         <div class="qa-grid">
           <div class="qa-card">
             <h3>Q. ブルンジコーヒーはどこで買えますか？</h3>
-            <p>A. 。</p>
+            <p>A. 大学のイベントやフェアトレード販売会などで購入可能です。最新情報はInstagramをご覧ください。</p>
           </div>
 
           <div class="qa-card">
             <h3>Q. 活動に参加するにはどうすればいいですか？</h3>
-            <p>A. 。</p>
+            <p>A. 学生主体で活動しており、興味のある方はUbumwe CoffeeのInstagram DMまたはメールからご連絡ください。</p>
           </div>
 
           <div class="qa-card">
             <h3>Q. コーヒーはフェアトレードですか？</h3>
-            <p>A. 。</p>
+            <p>A. はい。ブルンジ現地の農家と直接やりとりを行い、公正な価格での取引を行っています。</p>
           </div>
 
           <div class="qa-card">
             <h3>Q. 現地とのつながりはありますか？</h3>
-            <p>A. 。</p>
+            <p>A. メンバーがブルンジを訪問し、NGOや農家との協力関係を築いています。</p>
           </div>
         </div>
       </section>
