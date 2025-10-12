@@ -5,7 +5,42 @@
   <title>Q&A | Ubumwe Coffee</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <link rel="stylesheet" href="css/main.css" />
+  <style>
+    /* Q&Aカード用スタイル */
+    .qa-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .qa-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      padding: 1.5rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .qa-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    }
+
+    .qa-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.8rem;
+      color: #c06a2b; /* コーヒーっぽい色 */
+    }
+
+    .qa-card p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #444;
+    }
+  </style>
 </head>
+
 <body class="is-preload">
 <div id="wrapper">
 
@@ -18,7 +53,7 @@
         <a href="index.html" class="logo"><strong>Ubumwe Coffee</strong></a>
       </header>
 
-      <!-- Q&A セクション -->
+      <!-- Hero -->
       <section id="banner">
         <div class="content">
           <header>
@@ -31,36 +66,40 @@
         </span>
       </section>
 
+      <!-- Q&Aカード一覧 -->
       <section>
         <header class="major">
           <h2>よくある質問</h2>
         </header>
 
-        <div class="features">
-          <article>
-            <h3>Q. ？</h3>
+        <div class="qa-grid">
+          <div class="qa-card">
+            <h3>Q. ブルンジコーヒーはどこで買えますか？</h3>
             <p>A. 。</p>
-          </article>
+          </div>
 
-          <article>
-            <h3>Q. ？</h3>
+          <div class="qa-card">
+            <h3>Q. 活動に参加するにはどうすればいいですか？</h3>
             <p>A. 。</p>
-          </article>
+          </div>
 
-          <article>
-            <h3>Q.？</h3>
+          <div class="qa-card">
+            <h3>Q. コーヒーはフェアトレードですか？</h3>
             <p>A. 。</p>
-          </article>
+          </div>
+
+          <div class="qa-card">
+            <h3>Q. 現地とのつながりはありますか？</h3>
+            <p>A. 。</p>
+          </div>
         </div>
       </section>
-
     </div>
   </div>
 
   <!-- Sidebar（共通メニュー） -->
   <div id="sidebar">
     <div class="inner">
-
       <nav id="menu">
         <header class="major"><h2>Menu</h2></header>
         <ul>
@@ -72,13 +111,11 @@
           <li><a href="qanda.html">Q&A</a></li>
         </ul>
       </nav>
-
       <footer id="footer">
         <p class="copyright">&copy; Ubumwe Coffee.</p>
       </footer>
     </div>
   </div>
-
 </div>
 
 <!-- Scripts -->
