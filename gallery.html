@@ -4,21 +4,23 @@
   <meta charset="utf-8" />
   <title>Gallery | Ubumwe Coffee</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="assets/css/main.css" />
 
   <style>
-    /* 🌿ふんわりカフェ系背景 */
+    /* 🌿おしゃれカフェ背景 */
     body {
       background-color: #fdf8f3;
       color: #4b3e2d;
+      font-family: "Noto Sans JP", sans-serif;
     }
 
     h1 {
       color: #a76b43;
       font-weight: 700;
-      letter-spacing: 0.03em;
+      letter-spacing: 0.04em;
       text-align: center;
-      margin-bottom: 1rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
     }
 
     p {
@@ -27,7 +29,7 @@
       margin-bottom: 2rem;
     }
 
-    /* ✨ギャラリーグリッド */
+    /* 🌸ギャラリーグリッド */
     .gallery-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -37,27 +39,53 @@
       padding: 1rem;
     }
 
-    /* 各画像カード */
-    .gallery-container img {
+    /* カードの見た目 */
+    .photo-frame {
+      background: #ffffff;
+      border-radius: 14px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      opacity: 0; /* 最初は透明 */
+      transform: translateY(30px);
+      animation: fadeInUp 1.2s ease forwards;
+    }
+
+    /* フェードインアニメーション */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* 写真スタイル */
+    .photo-frame img {
       width: 100%;
-      height: 260px;
+      height: 250px;
       object-fit: cover;
       border-radius: 12px;
-      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
     }
 
-    .gallery-container img:hover {
-      transform: scale(1.04);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+    /* hoverでふわっと */
+    .photo-frame img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
     }
 
-    /* 🩶ふんわり枠 */
-    .photo-frame {
-      background: #fff;
-      border-radius: 14px;
-      padding: 0.5rem;
-    }
+    /* 順番にアニメーション遅延 */
+    .photo-frame:nth-child(1) { animation-delay: 0.1s; }
+    .photo-frame:nth-child(2) { animation-delay: 0.2s; }
+    .photo-frame:nth-child(3) { animation-delay: 0.3s; }
+    .photo-frame:nth-child(4) { animation-delay: 0.4s; }
+    .photo-frame:nth-child(5) { animation-delay: 0.5s; }
+    .photo-frame:nth-child(6) { animation-delay: 0.6s; }
+    .photo-frame:nth-child(7) { animation-delay: 0.7s; }
+    .photo-frame:nth-child(8) { animation-delay: 0.8s; }
   </style>
 </head>
 
@@ -73,7 +101,7 @@
         <a href="index.html" class="logo"><strong>Ubumwe Coffee</strong></a>
       </header>
 
-      <!-- Hero -->
+      <!-- タイトル -->
       <section id="banner">
         <div class="content">
           <h1>Gallery</h1>
@@ -81,7 +109,7 @@
         </div>
       </section>
 
-      <!-- Gallery -->
+      <!-- ギャラリー部分 -->
       <section>
         <div class="gallery-container">
           <div class="photo-frame"><img src="assets/images/coffee-pour.jpg" alt="コーヒーを淹れる様子"></div>
@@ -101,7 +129,6 @@
   <!-- Sidebar（共通メニュー） -->
   <div id="sidebar">
     <div class="inner">
-
       <nav id="menu">
         <header class="major"><h2>Menu</h2></header>
         <ul>
@@ -119,13 +146,15 @@
       </footer>
     </div>
   </div>
+
 </div>
 
 <!-- Scripts -->
-<script src="js/jquery.min.js"></script>
-<script src="js/browser.min.js"></script>
-<script src="js/breakpoints.min.js"></script>
-<script src="js/util.js"></script>
-<script src="js/main.js"></script>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
 </body>
 </html>
