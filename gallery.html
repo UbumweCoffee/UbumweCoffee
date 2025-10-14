@@ -4,86 +4,125 @@
   <meta charset="utf-8" />
   <title>Gallery | Ubumwe Coffee</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <!-- テンプレ既存のCSSを使う -->
   <link rel="stylesheet" href="css/main.css" />
   <style>
-    /* 背景を白で統一 */
-    body { background:#ffffff !important; }
+    body { background: #ffffff !important; }
 
-    /* タイトル＆赤いアンダーライン（トップと同じ色感） */
+    /* タイトル */
     .page-title h1 {
       font-size: 2.4rem;
       margin: 0 0 0.75rem 0;
-      line-height: 1.2;
+      color: #3b2f2f;
     }
-    .page-title h1::after{
-      content:"";
-      display:block;
-      width:80px;
-      height:6px;
-      background:#f56a6a; /* トップと同系の赤 */
-      border-radius:3px;
-      margin-top:14px;
+    .page-title h1::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 6px;
+      background: #f56a6a;
+      border-radius: 3px;
+      margin-top: 14px;
     }
-    .page-title p{ margin-top:.5rem; }
 
-    /* 画像3カラム（スマホは自動で2→1列） */
-    .gallery-grid{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.25rem;
+    /* ギャラリー */
+    .gallery-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 2rem;
     }
-    @media(max-width: 980px){ .gallery-grid{ grid-template-columns: repeat(2, 1fr);} }
-    @media(max-width: 640px){ .gallery-grid{ grid-template-columns: 1fr; } }
 
-    /* カード風にふんわり */
-    .image.fit img{
-      border-radius:10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,.08);
-      transition: transform .25s ease;
-      background:#fff;
+    .gallery-item {
+      width: 300px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      overflow: hidden;
+      text-align: center;
     }
-    .image.fit img:hover{ transform: scale(1.02); }
+
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .caption {
+      padding: 1rem;
+    }
+
+    .caption h3 {
+      font-size: 1.2rem;
+      color: #6b4f28;
+      margin-bottom: 0.5rem;
+    }
+
+    .caption p {
+      font-size: 0.95rem;
+      color: #3b2f2f;
+      line-height: 1.6;
+    }
+
+    @media(max-width: 768px){
+      .gallery-item {
+        width: 90%;
+      }
+    }
   </style>
 </head>
+
 <body class="is-preload">
-  <!-- ここからテンプレ標準の骨組み（メニューは自動でハンバーガー化） -->
   <div id="wrapper">
 
     <!-- Main -->
     <div id="main">
       <div class="inner">
 
-        <!-- Header（左上ハンバーガーはテンプレが出してくれる） -->
+        <!-- Header -->
         <header id="header">
           <a href="index.html" class="logo"><strong>Ubumwe Coffee</strong></a>
-          <ul class="icons"></ul>
         </header>
 
-        <!-- タイトル -->
+        <!-- Title -->
         <section id="banner">
           <div class="content page-title">
             <h1>Gallery</h1>
-            <p>Ubumwe Coffee の活動・想いが詰まった写真たち。</p>
+            <p>Ubumwe Coffeeの活動・想いが詰まった写真たち。</p>
           </div>
         </section>
 
-        <!-- ギャラリー -->
-        <section>
-          <div class="gallery-grid">
-            <span class="image fit"><img src="images/gallery1.jpg" alt="Gallery 1"></span>
-            <span class="image fit"><img src="images/gallery2.jpg" alt="Gallery 2"></span>
-            <span class="image fit"><img src="images/gallery3.jpg" alt="Gallery 3"></span>
-            <span class="image fit"><img src="images/gallery4.jpg" alt="Gallery 4"></span>
-            <span class="image fit"><img src="images/gallery5.jpg" alt="Gallery 5"></span>
-            <span class="image fit"><img src="images/gallery6.jpg" alt="Gallery 6"></span>
+        <!-- Gallery Section -->
+        <section class="gallery-container">
+          <div class="gallery-item">
+            <img src="images/gallery1.jpg" alt="ドリップコーヒーの様子">
+            <div class="caption">
+              <h3>丁寧に淹れる一杯</h3>
+              <p>一滴ずつ丁寧にドリップして、豆本来の香りを引き出します。<br>手仕事のぬくもりを大切にしています。</p>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="images/gallery2.jpg" alt="コーヒー豆の乾燥">
+            <div class="caption">
+              <h3>太陽の下で育つ豆</h3>
+              <p>ブルンジの豊かな陽光で丁寧に乾燥されたコーヒー豆。<br>自然の恵みが詰まった一粒一粒です。</p>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="images/gallery3.jpg" alt="仲間たちの笑顔">
+            <div class="caption">
+              <h3>つながる笑顔</h3>
+              <p>生産者と学生が共に歩むプロジェクト。<br>一杯のコーヒーが国と心をつなぎます。</p>
+            </div>
           </div>
         </section>
 
       </div>
     </div>
 
-    <!-- Sidebar（テンプレ標準のメニュー。全ページ同じにすると統一感◎） -->
+    <!-- Sidebar -->
     <div id="sidebar">
       <div class="inner">
 
@@ -116,7 +155,6 @@
 
   </div>
 
-  <!-- テンプレ既存のJS（これがハンバーガー等の動きを制御） -->
   <script src="js/jquery.min.js"></script>
   <script src="js/browser.min.js"></script>
   <script src="js/breakpoints.min.js"></script>
