@@ -1,93 +1,22 @@
-<!DOCTYPE HTML>
-<html>
-  <head>
-    <title>Ubumwe Coffee</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="css/main.css" />
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <title>Ubumwe Coffee</title>
 
-    <style>
-      /* ページ全体のフェードイン */
-      body {
-        opacity: 0;
-        transform: scale(1.02);
-        transition: opacity 1s ease, transform 1.5s ease;
-      }
-      body.loaded {
-        opacity: 1;
-        transform: scale(1);
-      }
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/main.css" />
 
-      /* ===== ヒーローセクション ===== */
-      .hero {
-        position: relative;
-        width: 100%;
-        height: 80vh;
-        background: url('image/top.jpg') center/cover no-repeat;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        color: white;
-        font-family: 'Noto Sans JP', sans-serif;
-        overflow: hidden;
-      }
+  <!-- Fallback for no JS -->
+  <noscript><link rel="stylesheet" href="css/noscript.css" /></noscript>
+</head>
+<body class="is-preload">
 
-      /* 黒の半透明フィルターで文字を見やすく */
-      .hero::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: rgba(0,0,0,0.4);
-      }
+  <!-- Wrapper -->
+  <div id="wrapper">
 
-      /* タイトル */
-      .hero h1 {
-        position: relative;
-        z-index: 2;
-        font-size: 3rem;
-        letter-spacing: 2px;
-        animation: fadeUp 1.5s ease forwards;
-        opacity: 0;
-        transform: translateY(30px);
-      }
-
-      /* キャッチコピー */
-      .hero p {
-        position: relative;
-        z-index: 2;
-        font-size: 1.3rem;
-        margin-top: 1rem;
-        color: #f5e9d0;
-        opacity: 0;
-        transform: translateY(30px);
-        animation: fadeUp 1.5s ease 0.5s forwards; /* 0.5秒遅れて出現 */
-      }
-
-      @keyframes fadeUp {
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      @media (max-width: 768px) {
-        .hero h1 { font-size: 2.2rem; }
-        .hero p { font-size: 1rem; }
-      }
-    </style>
-  </head>
-
-  <body class="is-preload">
-    <script>
-      // ページ読み込み時にフェードイン
-      window.addEventListener("load", () => {
-        document.body.classList.add("loaded");
-      });
-    </script>
-
-    <!-- ヘッダー -->
+    <!-- Header -->
     <header id="header">
       <a href="index.html" class="logo"><strong>Ubumwe Coffee</strong></a>
       <nav>
@@ -95,7 +24,7 @@
       </nav>
     </header>
 
-    <!-- メニュー -->
+    <!-- Menu -->
     <nav id="menu">
       <ul class="links">
         <li><a href="index.html">ホーム</a></li>
@@ -103,48 +32,48 @@
         <li><a href="coffee.html">Coffee Guide</a></li>
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="burundi.html">About Burundi</a></li>
-        <li><a href="qanda.html">Q&A</a></li>
+        <li><a href="qa.html">Q&amp;A</a></li>
       </ul>
     </nav>
 
-    <!-- ヒーローセクション -->
-    <section class="hero">
-      <h1>Ubumwe Coffee</h1>
-      <p>大学生とつくる世界一フェアなコーヒー</p>
+    <!-- Banner -->
+    <section id="banner">
+      <div class="inner">
+        <h1>Ubumwe Coffee</h1>
+        <p>大学生とつくる世界一フェアなコーヒー</p>
+      </div>
+      <video autoplay loop muted playsinline src="images/top.mp4" poster="images/top.jpg"></video>
     </section>
 
-    <!-- コンテンツ -->
-    <div id="main">
-      <section>
-        <header class="major">
-          <h2>私たちの活動</h2>
-          <span class="underline" style="display:block;width:80px;height:3px;background:#d76b6b;margin:10px auto 30px auto;border-radius:3px;"></span>
-        </header>
-        <div class="features">
-          <article class="fade-up">
-            <span class="icon solid fa-coffee"></span>
-            <div class="content">
-              <h3>コーヒー販売</h3>
-              <p>ブルンジ産のコーヒーを日本で販売し、収益を現地支援につなげています。</p>
-            </div>
-          </article>
-          <article class="fade-up">
-            <span class="icon solid fa-globe"></span>
-            <div class="content">
-              <h3>ブルンジ渡航</h3>
-              <p>現地NPOや農家との対話や、現地のコーヒー文化・暮らしを学んでいます。</p>
-            </div>
-          </article>
+    <!-- Main -->
+    <div id="main" class="alt">
+      <section class="spotlight style1 orient-left content-align-left image-position-center">
+        <div class="content">
+          <h2>Ubumwe Coffeeとは</h2>
+          <p>東海大学の学生が中心となり、ブルンジから仕入れたコーヒー豆を日本で販売することで、現地の支援と文化交流を進めています。</p>
+          <ul class="actions stacked">
+            <li><a href="about.html" class="button">もっと見る</a></li>
+          </ul>
+        </div>
+        <div class="image">
+          <img src="images/about.jpg" alt="Ubumwe Coffee Image" />
         </div>
       </section>
     </div>
 
-    <!-- フッター -->
+    <!-- Footer -->
     <footer id="footer">
-      <p>&copy; Ubumwe Coffee. All rights reserved.</p>
+      <p class="copyright">&copy; Ubumwe Coffee. All rights reserved.</p>
     </footer>
 
-    <script src="assets/js/main.js"></script>
-  </body>
-</html>
+  </div>
 
+  <!-- Scripts -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/browser.min.js"></script>
+  <script src="js/breakpoints.min.js"></script>
+  <script src="js/util.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
