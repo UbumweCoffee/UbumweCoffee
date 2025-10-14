@@ -4,159 +4,146 @@
     <title>Ubumwe Coffee</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <!-- CSSパス修正版 -->
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <style>
+      /* ページ全体のフェードイン */
+      body {
+        opacity: 0;
+        transform: scale(1.02);
+        transition: opacity 1s ease, transform 1.5s ease;
+      }
+      body.loaded {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      /* ===== ヒーローセクション ===== */
+      .hero {
+        position: relative;
+        width: 100%;
+        height: 80vh;
+        background: url('image/top.jpg') center/cover no-repeat;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        font-family: 'Noto Sans JP', sans-serif;
+        overflow: hidden;
+      }
+
+      /* 黒の半透明フィルターで文字を見やすく */
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0,0,0,0.4);
+      }
+
+      /* タイトル */
+      .hero h1 {
+        position: relative;
+        z-index: 2;
+        font-size: 3rem;
+        letter-spacing: 2px;
+        animation: fadeUp 1.5s ease forwards;
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      /* キャッチコピー */
+      .hero p {
+        position: relative;
+        z-index: 2;
+        font-size: 1.3rem;
+        margin-top: 1rem;
+        color: #f5e9d0;
+        opacity: 0;
+        transform: translateY(30px);
+        animation: fadeUp 1.5s ease 0.5s forwards; /* 0.5秒遅れて出現 */
+      }
+
+      @keyframes fadeUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hero h1 { font-size: 2.2rem; }
+        .hero p { font-size: 1rem; }
+      }
+    </style>
   </head>
+
   <body class="is-preload">
+    <script>
+      // ページ読み込み時にフェードイン
+      window.addEventListener("load", () => {
+        document.body.classList.add("loaded");
+      });
+    </script>
 
-    <!-- Wrapper -->
-    <div id="wrapper">
+    <!-- ヘッダー -->
+    <header id="header">
+      <a href="index.html" class="logo"><strong>Ubumwe Coffee</strong></a>
+      <nav>
+        <a href="#menu">Menu</a>
+      </nav>
+    </header>
 
-      <!-- Main -->
-      <div id="main">
-        <div class="inner">
+    <!-- メニュー -->
+    <nav id="menu">
+      <ul class="links">
+        <li><a href="index.html">ホーム</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="coffee.html">Coffee Guide</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="burundi.html">About Burundi</a></li>
+        <li><a href="qanda.html">Q&A</a></li>
+      </ul>
+    </nav>
 
-          <!-- Header -->
-          <header id="header">
-           <ul class="icons">
-  <li>
-    <a href="https://www.tiktok.com/@ubumwe.coffee" class="icon brands fa-tiktok">
-      <span class="label">TikTok</span>
-    </a>
-  </li>
-  <li>
-    <a href="https://www.instagram.com/Ubumwe_coffee_" class="icon brands fa-instagram">
-      <span class="label">Instagram</span>
-    </a>
-  </li>
-</ul>
+    <!-- ヒーローセクション -->
+    <section class="hero">
+      <h1>Ubumwe Coffee</h1>
+      <p>大学生とつくる世界一フェアなコーヒー</p>
+    </section>
 
-          </header>
-
-          <!-- Banner -->
-          <section id="banner">
+    <!-- コンテンツ -->
+    <div id="main">
+      <section>
+        <header class="major">
+          <h2>私たちの活動</h2>
+          <span class="underline" style="display:block;width:80px;height:3px;background:#d76b6b;margin:10px auto 30px auto;border-radius:3px;"></span>
+        </header>
+        <div class="features">
+          <article class="fade-up">
+            <span class="icon solid fa-coffee"></span>
             <div class="content">
-              <header>
-                <h1>Ubumwe Coffee</h1>
-                <p>大学生とつくる世界一フェアなコーヒー</p>
-              </header>
-              <p>Ubumwe Coffee</p>
-              <ul class="actions">
-                <li><a href="about.html" class="button big">もっと知る</a></li>
-              </ul>
+              <h3>コーヒー販売</h3>
+              <p>ブルンジ産のコーヒーを日本で販売し、収益を現地支援につなげています。</p>
             </div>
-            <span class="image object">
-              <img src="images/top.jpg" alt="メイン画像" style="width:100%; height:auto;" />
-            </span>
-          </section>
-
-          <!-- Section -->
-          <section>
-            <header class="major">
-              <h2>私たちの活動</h2>
-            </header>
-            <div class="features">
-              <article>
-                <span class="icon solid fa-mug-hot"></span>
-                <div class="content">
-                  <h3>コーヒー販売</h3>
-                  <p>ブルンジ産のコーヒーを日本で販売し、収益を現地支援につなげています。</p>
-                </div>
-              </article>
-              <article>
-                <span class="icon solid fa-rocket"></span>
-                <div class="content">
-                  <h3>free</h3>
-                  <p>。</p>
-                </div>
-              </article>
-              <article>
-                <span class="icon solid fa-globe"></span>
-                <div class="content">
-                  <h3>ブルンジ渡航</h3>
-                  <p>現地NPOや農家との対話や現地の様子の視察を行いました。</p>
-                </div>
-              </article>
-              <article>
-                <span class="icon solid fa-heart"></span>
-                <div class="content">
-                  <h3>Free</h3>
-                  <p>。</p>
-                </div>
-              </article>
+          </article>
+          <article class="fade-up">
+            <span class="icon solid fa-globe"></span>
+            <div class="content">
+              <h3>ブルンジ渡航</h3>
+              <p>現地NPOや農家との対話や、現地のコーヒー文化・暮らしを学んでいます。</p>
             </div>
-          </section>
-
+          </article>
         </div>
-      </div>
-
-      <!-- Sidebar -->
-      <div id="sidebar">
-        <div class="inner">
-
-          <!-- Search -->
-          <section id="search" class="alt">
-            <form method="post" action="#">
-              <input type="text" name="query" id="query" placeholder="Search" />
-            </form>
-          </section>
-
-          <!-- Menu -->
-          <nav id="menu">
-            <header class="major">
-              <h2>Menu</h2>
-            </header>
-            <ul>
-              <li><a href="index.html">ホーム</a></li>
-              <li><a href="about.html">about Us</a></li>
-              <li><a href="gallery.html">ギャラリー</a></li>
-              <li><a href="coffee.html">コーヒーガイド</a></li>
-              <li><a href="burundi.html">ブルンジとは</a></li>
-              <li><a href="qanda.html">Q&A</a></li>
-            </ul>
-          </nav>
-
-          <!-- Contact -->
-          <section>
-            <header class="major">
-              <h2>お問い合わせ</h2>
-            </header>
-            <p>ご質問・ご連絡はこちらからお願いします。</p>
-            <ul class="contact">
-              <li class="icon solid fa-envelope"><a href="#">ubumwecoffee@gmail.com</a></li>
-            </ul>
-          </section>
-
-          <!-- Footer -->
-          <footer id="footer">
-            <p class="copyright">&copy; Ubumwe Coffee. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-          </footer>
-
-        </div>
-      </div>
-
+      </section>
     </div>
 
-    <!-- Scripts（パス修正版） -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/browser.min.js"></script>
-    <script src="js/breakpoints.min.js"></script>
-    <script src="js/util.js"></script>
-    <script src="js/main.js"></script>
+    <!-- フッター -->
+    <footer id="footer">
+      <p>&copy; Ubumwe Coffee. All rights reserved.</p>
+    </footer>
 
+    <script src="assets/js/main.js"></script>
   </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
