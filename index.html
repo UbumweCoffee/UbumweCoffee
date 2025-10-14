@@ -1,30 +1,27 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <title>Ubumwe Coffee</title>
 
-  <!-- CSS -->
+  <!-- 正しいCSSパス -->
   <link rel="stylesheet" href="css/main.css" />
 
-  <!-- Fallback for no JS -->
   <noscript><link rel="stylesheet" href="css/noscript.css" /></noscript>
 </head>
-<body class="is-preload">
 
-  <!-- Wrapper -->
+<body class="is-preload">
+  <!-- 全体ラッパー -->
   <div id="wrapper">
 
-    <!-- Header -->
+    <!-- ヘッダー -->
     <header id="header">
       <a href="index.html" class="logo"><strong>Ubumwe Coffee</strong></a>
-      <nav>
-        <a href="#menu">Menu</a>
-      </nav>
+      <nav><a href="#menu">Menu</a></nav>
     </header>
 
-    <!-- Menu -->
+    <!-- メニュー -->
     <nav id="menu">
       <ul class="links">
         <li><a href="index.html">ホーム</a></li>
@@ -36,39 +33,40 @@
       </ul>
     </nav>
 
-    <!-- Banner -->
+    <!-- メインビジュアル -->
     <section id="banner">
       <div class="inner">
         <h1>Ubumwe Coffee</h1>
         <p>大学生とつくる世界一フェアなコーヒー</p>
       </div>
-      <video autoplay loop muted playsinline src="images/top.mp4" poster="images/top.jpg"></video>
+      <!-- 背景画像または動画 -->
+      <img src="images/top.jpg" alt="Top Coffee Image" style="width:100%; height:auto; display:block;" />
     </section>
 
-    <!-- Main -->
+    <!-- メイン内容 -->
     <div id="main" class="alt">
       <section class="spotlight style1 orient-left content-align-left image-position-center">
         <div class="content">
           <h2>Ubumwe Coffeeとは</h2>
-          <p>東海大学の学生が中心となり、ブルンジから仕入れたコーヒー豆を日本で販売することで、現地の支援と文化交流を進めています。</p>
+          <p>東海大学の学生が中心となり、ブルンジから仕入れたコーヒー豆を日本で販売し、現地支援と文化交流を進めています。</p>
           <ul class="actions stacked">
             <li><a href="about.html" class="button">もっと見る</a></li>
           </ul>
         </div>
         <div class="image">
-          <img src="images/about.jpg" alt="Ubumwe Coffee Image" />
+          <img src="images/about.jpg" alt="About Image" />
         </div>
       </section>
     </div>
 
-    <!-- Footer -->
+    <!-- フッター -->
     <footer id="footer">
       <p class="copyright">&copy; Ubumwe Coffee. All rights reserved.</p>
     </footer>
 
   </div>
 
-  <!-- Scripts -->
+  <!-- スクリプト -->
   <script src="js/jquery.min.js"></script>
   <script src="js/browser.min.js"></script>
   <script src="js/breakpoints.min.js"></script>
