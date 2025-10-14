@@ -1,113 +1,111 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us | Ubumwe Coffee</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/style.css">
+
   <style>
-    /* 🌿 全体の背景 */
+    /* 🌿 全体背景 */
     body {
-      background-color: #fcf8f3;
-      color: #5b4636;
       font-family: "Noto Sans JP", sans-serif;
+      background-color: #fdf8f3;
+      color: #3b2f2f;
       margin: 0;
       padding: 0;
     }
 
-    /* 🌟 見出し（ゴールド） */
-    h1, h2 {
-      color: #b9935a;
-      font-family: "Noto Serif JP", serif;
-    }
-
-    h1 {
-      text-align: center;
+    /* 🟤 見出しデザイン */
+    .about-title {
       font-size: 2.2em;
-      margin-top: 40px;
+      font-weight: 700;
+      color: #6b4f28;
+      text-align: center;
+      margin-top: 80px;
+      position: relative;
     }
 
-    /* 💛 カード全体 */
-    .card {
-      background: #fff;
+    /* ✨ 下線（ゴールド） */
+    .about-title::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 3px;
+      background-color: #d4af37;
+      margin: 10px auto 0;
+      border-radius: 2px;
+    }
+
+    /* 🍂 本文 */
+    .about-content {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+      line-height: 1.8;
+    }
+
+    /* 📸 写真エリア */
+    .about-photo {
+      width: 100%;
+      max-width: 600px;
+      display: block;
+      margin: 30px auto;
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      margin: 30px auto;
-      max-width: 850px;
-      padding: 30px;
-      animation: fadeIn 1.2s ease-in;
     }
 
-    .card h2 {
-      border-left: 6px solid #b9935a;
-      padding-left: 12px;
-      margin-bottom: 15px;
-    }
-
-    /* 📸 写真 */
-    .card img {
-      width: 100%;
-      border-radius: 10px;
-      margin-bottom: 15px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    /* テキスト */
-    p {
-      line-height: 1.8;
-      font-size: 1.05em;
-    }
-
-    /* 🩰 フェードインアニメーション */
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* 📱 スマホ対応 */
-    @media screen and (max-width: 768px) {
-      .card {
-        margin: 20px;
-        padding: 20px;
-      }
-      h1 { font-size: 1.8em; }
+    /* 🟤 見出し（小） */
+    h2 {
+      color: #6b4f28;
+      border-left: 4px solid #d4af37;
+      padding-left: 10px;
+      margin-top: 40px;
     }
   </style>
 </head>
+
 <body>
+  <!-- 🟫 ハンバーガーメニュー -->
+  <header>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <nav id="menu" class="hidden">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="About.html">About Us</a></li>
+        <li><a href="coffee.html">Coffee Guide</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="burundi.html">About Burundi</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <h1>About Us</h1>
+  <!-- 🟤 見出し -->
+  <h1 class="about-title">About Us</h1>
 
-  <div class="card">
-    <img src="images/about-coffee.jpg" alt="コーヒー豆">
-    <h2>🌿 私たちについて</h2>
-    <p>
-      Ubumwe Coffee（ウブムウェコーヒー）は、ブルンジと日本をコーヒーでつなぐ学生団体です。<br>
+  <div class="about-content">
+    <p>私たちは、ブルンジと日本をコーヒーでつなぐ学生団体です。<br>
       「Ubumwe（ウブムウェ）」とはキルンディ語で「つながり・団結」。<br>
       コーヒーを通して、人・文化・想いをつなげる活動をしています。
     </p>
-  </div>
 
-  <div class="card">
-    <img src="images/coffee-pour.jpg" alt="コーヒーを淹れる様子">
-    <h2>💛 私たちの想い</h2>
-    <p>
-      ブルンジのコーヒーをきっかけに、人と人、文化と文化がつながる。<br>
-      そんな温かいつながりを、日々の一杯の中に感じてもらえるような活動をしています。<br>
-      コーヒーを飲む時間が、誰かの想いに触れるきっかけになりますように。
+    <img src="images/about-photo.jpg" alt="Ubumwe Coffee" class="about-photo">
+
+    <h2>🌿 私たちの想い</h2>
+    <p>ブルンジのコーヒーをきっかけに、人と人、文化と文化がつながる。<br>
+      そんな温かいつながりを、日々の一杯の中に感じてもらえるような活動をしています。
     </p>
-  </div>
 
-  <div class="card">
-    <img src="images/top.jpg" alt="ブルンジの生産地の様子">
     <h2>☕ 活動内容</h2>
-    <p>
-      学内イベントでのコーヒー販売や、フェアトレード啓発イベントの開催を通して、<br>
-      コーヒーの背景にある「人」「文化」「想い」を伝えています。<br>
-      また、ブルンジの生産者や地域コミュニティと連携しながら、<br>
-      コーヒーを通じた持続可能な交流を目指しています。
-    </p>
+    <p>学内イベントでのコーヒー販売や、フェアトレードの普及を通じて、
+      コーヒーを通じた国際交流を行っています。</p>
   </div>
 
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("menu");
+      menu.classList.toggle("hidden");
+    }
+  </script>
 </body>
 </html>
