@@ -6,67 +6,106 @@
   <title>Q&A | Ubumwe Coffee</title>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/main.css" />
+  <noscript><link rel="stylesheet" href="css/noscript.css" /></noscript>
 
   <style>
+    /* 背景・フォント */
     body {
-      background-color: #ffffff !important; /* 白背景固定 */
+      background-color: #fff !important;
       color: #333;
       font-family: "Noto Sans JP", sans-serif;
+      margin: 0;
+      padding: 0;
     }
 
+    /* メイン全体 */
     #main {
-      background-color: #ffffff !important;
+      background-color: #fff;
+      padding: 3em 1em;
     }
 
-    h1 {
-      color: #5a3e2b; /* コーヒーブラウン */
+    /* セクションタイトル */
+    header.major {
       text-align: center;
+      margin-bottom: 2.5em;
+    }
+
+    header.major h1 {
+      color: #5a3e2b; /* コーヒーブラウン */
+      font-size: 2em;
       margin-bottom: 0.3em;
+      font-weight: 700;
+      position: relative;
+      display: inline-block;
     }
 
-    h2, h3 {
-      color: #5a3e2b;
-    }
-
-    p {
-      line-height: 1.8;
-    }
-
-    .qa-item {
-      background: #fafafa;
-      padding: 1.5em;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-      margin-bottom: 1.8em;
-    }
-
-    .qa-item h3 {
-      font-size: 1.1em;
-      margin-bottom: 0.5em;
-      color: #4b2e15;
+    header.major h1::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 3px;
+      background-color: #d75c4a; /* 赤ライン */
+      margin: 0.4em auto 0;
     }
 
     header.major p {
-      color: #7a6b5d;
-      text-align: center;
+      color: #7c6b5a;
       font-size: 1em;
+      margin-top: 0.5em;
+    }
+
+    /* Q&Aカード */
+    .qa-item {
+      background: #fafafa;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+      margin: 1.5em auto;
+      max-width: 700px;
+      padding: 1.5em;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .qa-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+    }
+
+    .qa-item h3 {
+      color: #5a3e2b;
+      font-size: 1.1em;
+      font-weight: 700;
+      margin-bottom: 0.6em;
+    }
+
+    .qa-item p {
+      color: #444;
+      line-height: 1.8;
+      font-size: 0.95em;
+      margin: 0;
+    }
+
+    /* フッター */
+    #footer {
+      background: #fff;
+      color: #777;
+      text-align: center;
+      padding: 2em 1em;
+      font-size: 0.9em;
     }
   </style>
-
-  <noscript><link rel="stylesheet" href="css/noscript.css" /></noscript>
 </head>
 
 <body class="is-preload">
   <div id="wrapper">
 
-    <!-- Header -->
+    <!-- ヘッダー -->
     <header id="header">
       <a href="index.html" class="logo"><strong>Ubumwe Coffee</strong></a>
       <nav><a href="#menu">Menu</a></nav>
     </header>
 
-    <!-- Menu -->
+    <!-- メニュー -->
     <nav id="menu">
       <ul class="links">
         <li><a href="index.html">ホーム</a></li>
@@ -78,7 +117,7 @@
       </ul>
     </nav>
 
-    <!-- Main -->
+    <!-- メイン -->
     <div id="main" class="alt">
       <section id="content" class="inner">
         <header class="major">
@@ -103,14 +142,14 @@
       </section>
     </div>
 
-    <!-- Footer -->
+    <!-- フッター -->
     <footer id="footer">
-      <p class="copyright">&copy; Ubumwe Coffee. All rights reserved.</p>
+      <p>&copy; Ubumwe Coffee. All rights reserved.</p>
     </footer>
 
   </div>
 
-  <!-- Scripts -->
+  <!-- スクリプト -->
   <script src="js/jquery.min.js"></script>
   <script src="js/browser.min.js"></script>
   <script src="js/breakpoints.min.js"></script>
