@@ -1,128 +1,126 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
   <title>Gallery | Ubumwe Coffee</title>
-  <link rel="stylesheet" href="css/style.css">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <!-- テンプレ既存のCSSを使う -->
+  <link rel="stylesheet" href="css/main.css" />
   <style>
-    body {
-      font-family: "Noto Sans JP", sans-serif;
-      background-color: #fdf8f3;
-      color: #3b2f2f;
-      margin: 0;
-      padding: 0;
-    }
+    /* 背景を白で統一 */
+    body { background:#ffffff !important; }
 
-    /* 🌿 タイトル */
-    .gallery-title {
-      font-size: 2.2em;
-      font-weight: 700;
-      color: #6b4f28;
-      text-align: center;
-      margin-top: 80px;
-      position: relative;
+    /* タイトル＆赤いアンダーライン（トップと同じ色感） */
+    .page-title h1 {
+      font-size: 2.4rem;
+      margin: 0 0 0.75rem 0;
+      line-height: 1.2;
     }
+    .page-title h1::after{
+      content:"";
+      display:block;
+      width:80px;
+      height:6px;
+      background:#f56a6a; /* トップと同系の赤 */
+      border-radius:3px;
+      margin-top:14px;
+    }
+    .page-title p{ margin-top:.5rem; }
 
-    /* ✨ ゴールド下線 */
-    .gallery-title::after {
-      content: "";
-      display: block;
-      width: 60px;
-      height: 3px;
-      background-color: #d4af37;
-      margin: 10px auto 0;
-      border-radius: 2px;
+    /* 画像3カラム（スマホは自動で2→1列） */
+    .gallery-grid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
     }
+    @media(max-width: 980px){ .gallery-grid{ grid-template-columns: repeat(2, 1fr);} }
+    @media(max-width: 640px){ .gallery-grid{ grid-template-columns: 1fr; } }
 
-    /* 📸 ギャラリー */
-    .gallery-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 15px;
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 0 20px;
+    /* カード風にふんわり */
+    .image.fit img{
+      border-radius:10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,.08);
+      transition: transform .25s ease;
+      background:#fff;
     }
-
-    .gallery-container img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
-    }
-
-    .gallery-container img:hover {
-      transform: scale(1.05);
-    }
-
-    /* 🟤 ハンバーガーメニュー */
-    .menu-icon {
-      position: fixed;
-      top: 20px;
-      left: 20px;
-      font-size: 28px;
-      cursor: pointer;
-      z-index: 1000;
-      color: #6b4f28;
-    }
-
-    nav ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    nav ul li {
-      margin: 10px 0;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: #6b4f28;
-      font-weight: 600;
-    }
-
-    .hidden {
-      display: none;
-    }
+    .image.fit img:hover{ transform: scale(1.02); }
   </style>
 </head>
+<body class="is-preload">
+  <!-- ここからテンプレ標準の骨組み（メニューは自動でハンバーガー化） -->
+  <div id="wrapper">
 
-<body>
-  <!-- 🟫 ハンバーガーメニュー -->
-  <header>
-    <div class="menu-icon" onclick="toggleMenu()">☰</div>
-    <nav id="menu" class="hidden">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="About.html">About Us</a></li>
-        <li><a href="coffee.html">Coffee Guide</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="burundi.html">About Burundi</a></li>
-      </ul>
-    </nav>
-  </header>
+    <!-- Main -->
+    <div id="main">
+      <div class="inner">
 
-  <!-- 🟤 タイトル -->
-  <h1 class="gallery-title">Gallery</h1>
+        <!-- Header（左上ハンバーガーはテンプレが出してくれる） -->
+        <header id="header">
+          <a href="index.html" class="logo"><strong>Ubumwe Coffee</strong></a>
+          <ul class="icons"></ul>
+        </header>
 
-  <!-- 📸 写真エリア -->
-  <div class="gallery-container">
-    <img src="images/gallery1.jpg" alt="Coffee Image 1">
-    <img src="images/gallery2.jpg" alt="Coffee Image 2">
-    <img src="images/gallery3.jpg" alt="Coffee Image 3">
-    <img src="images/gallery4.jpg" alt="Coffee Image 4">
-    <img src="images/gallery5.jpg" alt="Coffee Image 5">
-    <img src="images/gallery6.jpg" alt="Coffee Image 6">
+        <!-- タイトル -->
+        <section id="banner">
+          <div class="content page-title">
+            <h1>Gallery</h1>
+            <p>Ubumwe Coffee の活動・想いが詰まった写真たち。</p>
+          </div>
+        </section>
+
+        <!-- ギャラリー -->
+        <section>
+          <div class="gallery-grid">
+            <span class="image fit"><img src="images/gallery1.jpg" alt="Gallery 1"></span>
+            <span class="image fit"><img src="images/gallery2.jpg" alt="Gallery 2"></span>
+            <span class="image fit"><img src="images/gallery3.jpg" alt="Gallery 3"></span>
+            <span class="image fit"><img src="images/gallery4.jpg" alt="Gallery 4"></span>
+            <span class="image fit"><img src="images/gallery5.jpg" alt="Gallery 5"></span>
+            <span class="image fit"><img src="images/gallery6.jpg" alt="Gallery 6"></span>
+          </div>
+        </section>
+
+      </div>
+    </div>
+
+    <!-- Sidebar（テンプレ標準のメニュー。全ページ同じにすると統一感◎） -->
+    <div id="sidebar">
+      <div class="inner">
+
+        <nav id="menu">
+          <header class="major"><h2>Menu</h2></header>
+          <ul>
+            <li><a href="index.html">ホーム</a></li>
+            <li><a href="About.html">About Us</a></li>
+            <li><a href="coffee.html">コーヒーガイド</a></li>
+            <li><a href="gallery.html">ギャラリー</a></li>
+            <li><a href="burundi.html">ブルンジとは</a></li>
+            <li><a href="qanda.html">Q&amp;A</a></li>
+          </ul>
+        </nav>
+
+        <section>
+          <header class="major"><h2>お問い合わせ</h2></header>
+          <p>ご質問・ご連絡はこちらからお願いします。</p>
+          <ul class="contact">
+            <li class="icon solid fa-envelope">ubumwecoffee@gmail.com</li>
+          </ul>
+        </section>
+
+        <footer id="footer">
+          <p class="copyright">&copy; Ubumwe Coffee.</p>
+        </footer>
+
+      </div>
+    </div>
+
   </div>
 
-  <script>
-    function toggleMenu() {
-      const menu = document.getElementById("menu");
-      menu.classList.toggle("hidden");
-    }
-  </script>
+  <!-- テンプレ既存のJS（これがハンバーガー等の動きを制御） -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/browser.min.js"></script>
+  <script src="js/breakpoints.min.js"></script>
+  <script src="js/util.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
