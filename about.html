@@ -1,111 +1,165 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
   <title>About Us | Ubumwe Coffee</title>
-  <link rel="stylesheet" href="css/style.css">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="css/main.css" />
   <style>
-    /* 🌿 全体背景 */
-    body {
-      font-family: "Noto Sans JP", sans-serif;
-      background-color: #fdf8f3;
+    /* 背景を白に統一 */
+    body { background:#ffffff !important; }
+
+    /* タイトルと赤いアンダーライン */
+    .page-title h1 {
+      font-size: 2.4rem;
+      margin: 0 0 0.75rem 0;
+      line-height: 1.2;
       color: #3b2f2f;
-      margin: 0;
-      padding: 0;
     }
-
-    /* 🟤 見出しデザイン */
-    .about-title {
-      font-size: 2.2em;
-      font-weight: 700;
-      color: #6b4f28;
-      text-align: center;
-      margin-top: 80px;
-      position: relative;
-    }
-
-    /* ✨ 下線（ゴールド） */
-    .about-title::after {
+    .page-title h1::after {
       content: "";
       display: block;
-      width: 60px;
-      height: 3px;
-      background-color: #d4af37;
-      margin: 10px auto 0;
-      border-radius: 2px;
+      width: 80px;
+      height: 6px;
+      background: #f56a6a; /* トップと同じ赤 */
+      border-radius: 3px;
+      margin-top: 14px;
     }
 
-    /* 🍂 本文 */
-    .about-content {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
+    .page-title p {
+      margin-top: .5rem;
+      color: #5a4b3f;
+    }
+
+    /* セクション間の余白 */
+    section { margin-bottom: 3rem; }
+
+    /* 白カードボックス */
+    .about-box {
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
       line-height: 1.8;
     }
 
-    /* 📸 写真エリア */
-    .about-photo {
-      width: 100%;
-      max-width: 600px;
-      display: block;
-      margin: 30px auto;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* 見出し */
+    h2 {
+      font-size: 1.4rem;
+      margin-top: 1rem;
+      color: #6b4f28;
+      display: flex;
+      align-items: center;
     }
 
-    /* 🟤 見出し（小） */
-    h2 {
-      color: #6b4f28;
-      border-left: 4px solid #d4af37;
-      padding-left: 10px;
-      margin-top: 40px;
+    h2::before {
+      content: "☕ ";
+      font-size: 1.2rem;
+      margin-right: 0.5rem;
+    }
+
+    /* 本文 */
+    p { color: #3b2f2f; margin-bottom: 1.2rem; }
+
+    /* レスポンシブ */
+    @media (max-width: 768px) {
+      .about-box { padding: 1.5rem; }
+      h1 { font-size: 2rem; }
     }
   </style>
 </head>
+<body class="is-preload">
 
-<body>
-  <!-- 🟫 ハンバーガーメニュー -->
-  <header>
-    <div class="menu-icon" onclick="toggleMenu()">☰</div>
-    <nav id="menu" class="hidden">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="About.html">About Us</a></li>
-        <li><a href="coffee.html">Coffee Guide</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="burundi.html">About Burundi</a></li>
-      </ul>
-    </nav>
-  </header>
+  <!-- Wrapper -->
+  <div id="wrapper">
 
-  <!-- 🟤 見出し -->
-  <h1 class="about-title">About Us</h1>
+    <!-- Main -->
+    <div id="main">
+      <div class="inner">
 
-  <div class="about-content">
-    <p>私たちは、ブルンジと日本をコーヒーでつなぐ学生団体です。<br>
-      「Ubumwe（ウブムウェ）」とはキルンディ語で「つながり・団結」。<br>
-      コーヒーを通して、人・文化・想いをつなげる活動をしています。
-    </p>
+        <!-- Header（左上にハンバーガーメニュー） -->
+        <header id="header">
+          <a href="index.html" class="logo"><strong>Ubumwe Coffee</strong></a>
+        </header>
 
-    <img src="images/about-photo.jpg" alt="Ubumwe Coffee" class="about-photo">
+        <!-- タイトル -->
+        <section id="banner">
+          <div class="content page-title">
+            <h1>About Us</h1>
+            <p>UBUMWE COFFEE（ウブムウェコーヒー）について</p>
+          </div>
+        </section>
 
-    <h2>🌿 私たちの想い</h2>
-    <p>ブルンジのコーヒーをきっかけに、人と人、文化と文化がつながる。<br>
-      そんな温かいつながりを、日々の一杯の中に感じてもらえるような活動をしています。
-    </p>
+        <!-- 本文エリア -->
+        <section>
+          <div class="about-box">
 
-    <h2>☕ 活動内容</h2>
-    <p>学内イベントでのコーヒー販売や、フェアトレードの普及を通じて、
-      コーヒーを通じた国際交流を行っています。</p>
+            <p>
+              私たちは、ブルンジと日本をコーヒーでつなぐ学生団体です。<br>
+              「Ubumwe（ウブムウェ）」とはキルンディ語で「つながり・団結」を意味します。<br>
+              コーヒーを通して、人・文化・想いをつなげる活動を行っています。
+            </p>
+
+            <h2>私たちの想い</h2>
+            <p>
+              ブルンジのコーヒーをきっかけに、人と人、文化と文化がつながる。<br>
+              そんな温かいつながりを、日々の一杯の中に感じてもらえるよう活動しています。<br>
+              コーヒーを飲む時間が、誰かの想いに触れるきっかけになりますように。
+            </p>
+
+            <h2>活動内容</h2>
+            <p>
+              学内イベントでのコーヒー販売や、フェアトレードをテーマにした展示・トークイベントの開催。<br>
+              また、ブルンジの生産者との交流や、現地での活動報告を通して、<br>
+              コーヒーの背景にあるストーリーを伝えることを目指しています。
+            </p>
+
+          </div>
+        </section>
+
+      </div>
+    </div>
+
+    <!-- Sidebar（テンプレ標準メニュー） -->
+    <div id="sidebar">
+      <div class="inner">
+
+        <!-- Menu -->
+        <nav id="menu">
+          <header class="major"><h2>Menu</h2></header>
+          <ul>
+            <li><a href="index.html">ホーム</a></li>
+            <li><a href="About.html">About Us</a></li>
+            <li><a href="coffee.html">コーヒーガイド</a></li>
+            <li><a href="gallery.html">ギャラリー</a></li>
+            <li><a href="burundi.html">ブルンジとは</a></li>
+            <li><a href="qanda.html">Q&amp;A</a></li>
+          </ul>
+        </nav>
+
+        <!-- Contact -->
+        <section>
+          <header class="major"><h2>お問い合わせ</h2></header>
+          <p>ご質問・ご連絡はこちらからお願いします。</p>
+          <ul class="contact">
+            <li class="icon solid fa-envelope">ubumwecoffee@gmail.com</li>
+          </ul>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+          <p class="copyright">&copy; Ubumwe Coffee.</p>
+        </footer>
+
+      </div>
+    </div>
   </div>
 
-  <script>
-    function toggleMenu() {
-      const menu = document.getElementById("menu");
-      menu.classList.toggle("hidden");
-    }
-  </script>
+  <!-- JS（テンプレ公式） -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/browser.min.js"></script>
+  <script src="js/breakpoints.min.js"></script>
+  <script src="js/util.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
