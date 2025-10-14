@@ -2,103 +2,167 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8" />
-  <title>コーヒーガイド | Ubumwe Coffee</title>
+  <title>Coffee Guide | Ubumwe Coffee</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <link rel="stylesheet" href="css/main.css" />
+  <style>
+    body { background: #ffffff !important; }
+
+    /* タイトルと赤ライン */
+    .page-title h1 {
+      font-size: 2.4rem;
+      margin: 0 0 0.75rem 0;
+      color: #3b2f2f;
+    }
+    .page-title h1::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 6px;
+      background: #f56a6a;
+      border-radius: 3px;
+      margin-top: 14px;
+    }
+    .page-title p { color: #5a4b3f; }
+
+    section { margin-bottom: 3rem; }
+
+    /* カード */
+    .bean-box, .guide-box {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      padding: 2rem;
+      margin-bottom: 2rem;
+      line-height: 1.8;
+    }
+
+    /* 見出し */
+    h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      color: #6b4f28;
+      border-bottom: 3px solid #f56a6a;
+      display: inline-block;
+      padding-bottom: 0.3rem;
+    }
+
+    .bean-info p {
+      margin-bottom: 1rem;
+      color: #3b2f2f;
+    }
+
+    @media(max-width: 768px){
+      .bean-box, .guide-box { padding: 1.5rem; }
+    }
+  </style>
 </head>
+
 <body class="is-preload">
-<div id="wrapper">
+  <div id="wrapper">
 
-  <!-- Main -->
-  <div id="main">
-    <div class="inner">
+    <!-- Main -->
+    <div id="main">
+      <div class="inner">
 
-      <!-- Header -->
-      <header id="header">
-        <a href="index.html" class="logo"><strong>Ubumwe Coffee</strong></a>
-        <ul class="icons"></ul>
-      </header>
+        <!-- Header -->
+        <header id="header">
+          <a href="index.html" class="logo"><strong>Ubumwe Coffee</strong></a>
+        </header>
 
-      <!-- Heroセクション -->
-      <section id="banner">
-        <div class="content">
-          <header>
-            <h1>コーヒーガイド</h1>
-            <p>美味しいコーヒーを淹れる方法</p>
-          </header>
-          <p>
-            下記の手順で、香り豊かなブルンジ産コーヒーをお楽しみください。
-          </p>
-        </div>
-        <span class="image object">
-          <img src="images/coffee-pour.jpg" alt="コーヒーを淹れる様子" />
-        </span>
-      </section>
+        <!-- Title -->
+        <section id="banner">
+          <div class="content page-title">
+            <h1>Coffee Guide</h1>
+            <p>ブルンジコーヒー豆の特徴と、美味しい淹れ方をご紹介します。</p>
+          </div>
+        </section>
 
-      <!-- コーヒーの淹れ方 -->
-      <section>
-        <header class="major"><h2>コーヒーの淹れ方</h2></header>
+        <!-- Section 1: Bean info -->
+        <section>
+          <div class="bean-box">
+            <h2>ブルンジコーヒー豆の特徴</h2>
+            <div class="bean-info">
+              <p><strong>原産国：</strong>ブルンジ共和国<br>
+                 <strong>品種：</strong>ブルボン<br>
+                 <strong>産地：</strong>カヤンザ、ムインガなど<br>
+                 <strong>焙煎度合い：</strong>中浅煎り<br>
+                 <strong>精製方法：</strong>フルウォッシュド、セミウォッシュド、ナチュラル、ハニーなど</p>
 
-        <h3>🔸 下準備</h3>
-        <ul>
-          <li>ポットに水を入れて沸かす。</li>
-          <li>沸いたらケトルにお湯を入れて「沸騰」を押す。</li>
-          <li>フィルターを折り、ドリップスタンドにセットする。</li>
-          <li>ドリップスタンドのレバーが上向きになっているか確認。</li>
-        </ul>
+              <p>
+                ブルンジは標高が約1731mと高く、冷涼で肥沃な火山性土壌に恵まれた土地でコーヒー栽培が盛んです。<br>
+                昼夜の寒暖差によってゆっくりと熟成するため、チェリーや柑橘系、アプリコットを思わせる
+                フルーティーな酸味とやわらかな甘みが特徴です。<br>
+                浅煎りに近い焙煎度では、豆本来の香りと透明感のある味わいが際立ちます。
+              </p>
 
-        <h3>☕ ホットコーヒー</h3>
-        <ol>
-          <li>コーヒーミルにコーヒー豆を入れてスタートボタンを押す。</li>
-          <li>ケトルにお湯を準備し、フィルターを軽く湿らせる。</li>
-          <li>ドリップスタンドにコーヒー粉を入れる。</li>
-          <li>タイマーをスタートし、同時にお湯（90℃前後）を入れ、2分待つ。</li>
-          <li>1杯（130ml）または2杯（260ml）で調整。</li>
-          <li>抽出が終わったらカップに注いで完成。</li>
-        </ol>
+              <p>
+                世界全体におけるブルンジ産コーヒーのシェアは約0.17％と、希少価値の高い豆です。<br>
+                イベントで試飲していただいたお客様からは、「苦味が控えめで香りが華やか」との声を多くいただいています。
+              </p>
+            </div>
+          </div>
+        </section>
 
-        <h3>🧊 アイスコーヒー</h3>
-        <ol>
-          <li>コーヒーミルにコーヒー豆を入れてスタートボタンを押す。</li>
-          <li>ビーカーとカップに氷を入れる（1杯：約20g）。</li>
-          <li>お湯（90℃前後）を入れ、2分待つ。</li>
-          <li>抽出後、コーヒーと氷をスプーンで軽く混ぜる。</li>
-          <li>カップに注いで完成。</li>
-        </ol>
-      </section>
+        <!-- Section 2: Brewing guide -->
+        <section>
+          <div class="guide-box">
+            <h2>美味しいコーヒーを淹れる方法</h2>
+            <p>
+              Ubumwe Coffeeでは、ブルンジ産のフェアトレードコーヒーを使用しています。<br>
+              ご自宅でも香り高い一杯を楽しむために、以下のステップを参考にしてください。
+            </p>
+            <ol>
+              <li><strong>① 豆を挽く：</strong>中細挽き程度がおすすめです。</li>
+              <li><strong>② お湯の準備：</strong>92〜96℃の少し冷ましたお湯を使用します。</li>
+              <li><strong>③ 蒸らし：</strong>粉全体にお湯を少量注ぎ、30秒ほど待ちます。</li>
+              <li><strong>④ 抽出：</strong>中心から「の」の字を描くようにゆっくり注ぎます。</li>
+              <li><strong>⑤ 完成：</strong>抽出が終わったら、香りを楽しみながらゆっくりどうぞ。</li>
+            </ol>
+          </div>
+        </section>
 
+      </div>
     </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+      <div class="inner">
+
+        <nav id="menu">
+          <header class="major"><h2>Menu</h2></header>
+          <ul>
+            <li><a href="index.html">ホーム</a></li>
+            <li><a href="About.html">About Us</a></li>
+            <li><a href="coffee.html">コーヒーガイド</a></li>
+            <li><a href="gallery.html">ギャラリー</a></li>
+            <li><a href="burundi.html">ブルンジとは</a></li>
+            <li><a href="qanda.html">Q&amp;A</a></li>
+          </ul>
+        </nav>
+
+        <section>
+          <header class="major"><h2>お問い合わせ</h2></header>
+          <p>ご質問・ご連絡はこちらからお願いします。</p>
+          <ul class="contact">
+            <li class="icon solid fa-envelope">ubumwecoffee@gmail.com</li>
+          </ul>
+        </section>
+
+        <footer id="footer">
+          <p class="copyright">&copy; Ubumwe Coffee.</p>
+        </footer>
+
+      </div>
+    </div>
+
   </div>
 
-  <!-- Sidebar -->
-  <div id="sidebar">
-    <div class="inner">
-
-      <nav id="menu">
-        <header class="major"><h2>Menu</h2></header>
-        <ul>
-          <li><a href="index.html">ホーム</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="gallery.html">ギャラリー</a></li>
-          <li><a href="coffee-guide.html">コーヒーガイド</a></li>
-          <li><a href="burundi.html">ブルンジとは</a></li>
-        </ul>
-      </nav>
-
-      <footer id="footer">
-        <p class="copyright">&copy; Ubumwe Coffee.</p>
-      </footer>
-    </div>
-  </div>
-
-</div>
-
-<!-- Scripts -->
-<script src="js/jquery.min.js"></script>
-<script src="js/browser.min.js"></script>
-<script src="js/breakpoints.min.js"></script>
-<script src="js/util.js"></script>
-<script src="js/main.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/browser.min.js"></script>
+  <script src="js/breakpoints.min.js"></script>
+  <script src="js/util.js"></script>
+  <script src="js/main.js"></script>
 
 </body>
 </html>
