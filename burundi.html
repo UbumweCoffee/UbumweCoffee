@@ -2,129 +2,163 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8" />
-  <title>ブルンジとは | Ubumwe Coffee</title>
+  <title>About Burundi | Ubumwe Coffee</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <link rel="stylesheet" href="css/main.css" />
+  <style>
+    body { background: #ffffff !important; }
+
+    /* タイトルと赤ライン */
+    .page-title h1 {
+      font-size: 2.4rem;
+      margin: 0 0 0.75rem 0;
+      color: #3b2f2f;
+    }
+    .page-title h1::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 6px;
+      background: #f56a6a;
+      border-radius: 3px;
+      margin-top: 14px;
+    }
+
+    section { margin-bottom: 3rem; }
+
+    /* カード */
+    .burundi-box {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      padding: 2rem;
+      line-height: 1.8;
+    }
+
+    /* 画像 */
+    .flag, .map {
+      display: block;
+      margin: 0 auto 1.2rem auto;
+      max-width: 200px;
+    }
+
+    /* 見出し */
+    h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      color: #6b4f28;
+      border-bottom: 3px solid #f56a6a;
+      display: inline-block;
+      padding-bottom: 0.3rem;
+    }
+
+    p { color: #3b2f2f; margin-bottom: 1rem; }
+
+    @media(max-width: 768px){
+      .burundi-box { padding: 1.5rem; }
+    }
+  </style>
 </head>
+
 <body class="is-preload">
-<div id="wrapper">
+  <div id="wrapper">
 
-  <!-- Main -->
-  <div id="main">
-    <div class="inner">
+    <!-- Main -->
+    <div id="main">
+      <div class="inner">
 
-      <!-- Header -->
-      <header id="header">
-        <a href="index.html" class="logo"><strong>Ubumwe Coffee</strong></a>
-        <ul class="icons"></ul>
-      </header>
+        <!-- Header -->
+        <header id="header">
+          <a href="index.html" class="logo"><strong>Ubumwe Coffee</strong></a>
+        </header>
 
-      <!-- Hero -->
-      <section id="banner">
-        <div class="content">
-          <header>
+        <!-- Title -->
+        <section id="banner">
+          <div class="content page-title">
             <h1>ブルンジとは</h1>
             <p>アフリカ・グレートリフトバレーに位置する小さなコーヒー生産国</p>
-          </header>
-          <p>
-            ブルンジは標高が高く、肥沃な火山性土壌と豊富な降雨に恵まれています。
-            多くが小規模農家で、手摘み・水洗処理を中心に丁寧な生産が行われています。
-          </p>
-        </div>
-        <span class="image object">
-          <!-- 任意のヒーロー画像。なければ top.jpg を使ってね -->
-          <img src="images/top.jpg" alt="ブルンジのコーヒー" />
-        </span>
-      </section>
+          </div>
+        </section>
 
-      <!-- 地理・気候 -->
-      <section>
-        <header class="major"><h2>地理と気候</h2></header>
-        <div class="features">
-          <article>
-            <span class="icon solid fa-mountain"></span>
-            <div class="content">
-              <h3>標高</h3>
-              <p>多くの農園が1,500〜2,000mに位置し、ゆっくり熟すことで糖度が高まり、クリーンな酸が生まれます。</p>
-            </div>
-          </article>
-          <article>
-            <span class="icon solid fa-tint"></span>
-            <div class="content">
-              <h3>降雨と水資源</h3>
-              <p>2つの雨季があり水洗処理に適した水量を確保。ウォッシングステーションが各地に点在します。</p>
-            </div>
-          </article>
-          <article>
-            <span class="icon solid fa-seedling"></span>
-            <div class="content">
-              <h3>品種</h3>
-              <p>ブルボン系が中心。チェリーのような甘さとバランスの良さが特徴です。</p>
-            </div>
-          </article>
-          <article>
-            <span class="icon solid fa-mug-hot"></span>
-            <div class="content">
-              <h3>風味の傾向</h3>
-              <p>赤い果実、柑橘、ハチミツの甘さ。クリーンでジューシー、後味はスウィート。</p>
-            </div>
-          </article>
-        </div>
-      </section>
+        <!-- Content -->
+        <section>
+          <div class="burundi-box">
+            <img src="images/burundi_flag.png" alt="ブルンジ国旗" class="flag">
+            <img src="images/burundi_map.png" alt="ブルンジ地図" class="map">
 
-      <!-- 生産とプロセス -->
-      <section>
-        <header class="major"><h2>生産とプロセス</h2></header>
-        <div class="posts">
-          <article>
-            <a class="image"><img src="images/pic01.jpg" alt=""></a>
-            <h3>小規模農家のネットワーク</h3>
-            <p>1農家あたり数百本規模のコーヒー樹を育て、収穫したチェリーを共同の水洗所へ持ち込みます。</p>
-          </article>
-          <article>
-            <a class="image"><img src="images/pic02.jpg" alt=""></a>
-            <h3>ウォッシュト中心</h3>
-            <p>伝統的なウォッシュト製法でクリーンなカップに。近年はナチュラルやハニーも拡大中。</p>
-          </article>
-          <article>
-            <a class="image"><img src="images/pic03.jpg" alt=""></a>
-            <h3>トレーサビリティ</h3>
-            <p>ロット管理が進み、ステーション／丘（丘陵）単位での買付け・表記が一般的になってきました。</p>
-          </article>
-        </div>
-      </section>
+            <h2>ブルンジ共和国（Burundi）</h2>
+            <p>3つの星 → フトゥ・トゥチ・トゥワ の「団結」「努力」「進歩」</p>
+            <p>赤 → 独立と闘争　緑 → 未来への希望と発展　白 → 平和</p>
 
+            <p><strong>人口・面積：</strong><br>
+            約1100万人　2.787万km²</p>
+
+            <p><strong>位置・特徴：</strong><br>
+            東アフリカの内陸部に位置し、国は心臓のような形。標高が1000m以上あり、山岳と起伏の激しい高原が広がる「アフリカのスイス」と呼ばれています。</p>
+
+            <p><strong>言語：</strong><br>
+            公用語はキルンディ語（母語）とフランス語。</p>
+
+            <h2>ブルンジの実情</h2>
+            <p>
+              ブルンジは東アフリカに位置する内陸国で、アフリカ大陸の中でも小さな国であり、
+              世界で最も貧しい国の一つと言われています。<br>
+              貧困層の割合が高く、十分な教育を受けられない子どもや、
+              十分な食事をとることができない人が多くいます。
+            </p>
+
+            <p>
+              温暖な気候と最適な雨量・土壌に恵まれており、アフリカの中でも質の高いコーヒーを生産する国の一つとして知られています。<br>
+              コーヒー豆は主要な輸出品の一つですが、ブルンジのコーヒー世界シェアはわずか約0.17％と言われています。
+            </p>
+
+            <p>
+              ブルンジの特色を生かした産業の更なる安定化と、貧困層の拡大を抑えることが今後の課題の一つと言えるでしょう。
+            </p>
+          </div>
+        </section>
+
+      </div>
     </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+      <div class="inner">
+
+        <nav id="menu">
+          <header class="major"><h2>Menu</h2></header>
+          <ul>
+            <li><a href="index.html">ホーム</a></li>
+            <li><a href="About.html">About Us</a></li>
+            <li><a href="coffee.html">コーヒーガイド</a></li>
+            <li><a href="gallery.html">ギャラリー</a></li>
+            <li><a href="burundi.html">ブルンジとは</a></li>
+            <li><a href="qanda.html">Q&amp;A</a></li>
+          </ul>
+        </nav>
+
+        <section>
+          <header class="major"><h2>お問い合わせ</h2></header>
+          <p>ご質問・ご連絡はこちらからお願いします。</p>
+          <ul class="contact">
+            <li class="icon solid fa-envelope">ubumwecoffee@gmail.com</li>
+          </ul>
+        </section>
+
+        <footer id="footer">
+          <p class="copyright">&copy; Ubumwe Coffee.</p>
+        </footer>
+
+      </div>
+    </div>
+
   </div>
 
-  <!-- Sidebar（共通メニュー） -->
-  <div id="sidebar">
-    <div class="inner">
-      <nav id="menu">
-        <header class="major"><h2>Menu</h2></header>
-        <ul>
-          <li><a href="index.html">ホーム</a></li>
-          <li><a href="About.html">about Us</a></li>
-          <li><a href="gallery.html">ギャラリー</a></li>
-          <li><a href="coffee.html">コーヒーガイド</a></li>
-          <li><a href="burundi.html">ブルンジとは</a></li>
-          <li><a href="qanda.html">Q&A</a></li>
-        </ul>
-      </nav>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/browser.min.js"></script>
+  <script src="js/breakpoints.min.js"></script>
+  <script src="js/util.js"></script>
+  <script src="js/main.js"></script>
 
-      <footer id="footer">
-        <p class="copyright">&copy; Ubumwe Coffee.</p>
-      </footer>
-    </div>
-  </div>
-
-</div>
-
-<!-- Scripts（js フォルダに合わせて） -->
-<script src="js/jquery.min.js"></script>
-<script src="js/browser.min.js"></script>
-<script src="js/breakpoints.min.js"></script>
-<script src="js/util.js"></script>
-<script src="js/main.js"></script>
 </body>
 </html>
