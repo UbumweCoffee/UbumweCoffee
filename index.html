@@ -1,77 +1,71 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <title>Ubumwe Coffee</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>Ubumwe Coffee</title>
 
-  <!-- 正しいCSSパス -->
-  <link rel="stylesheet" href="css/main.css" />
+    <!-- 正しいCSSパス -->
+    <link rel="stylesheet" href="css/main.css" />
+    <noscript><link rel="stylesheet" href="css/noscript.css" /></noscript>
+  </head>
 
-  <noscript><link rel="stylesheet" href="css/noscript.css" /></noscript>
-</head>
+  <body class="is-preload">
+    <!-- 全体ラッパー -->
+    <div id="wrapper">
 
-<body class="is-preload">
-  <!-- 全体ラッパー -->
-  <div id="wrapper">
+      <!-- ヘッダー -->
+      <header id="header">
+        <a href="index.html" class="logo"><strong>Ubumwe Coffee</strong></a>
+        <nav><a href="#menu">Menu</a></nav>
+      </header>
 
-    <!-- ヘッダー -->
-    <header id="header">
-      <a href="index.html" class="logo"><strong>Ubumwe Coffee</strong></a>
-      <nav><a href="#menu">Menu</a></nav>
-    </header>
+      <!-- メニュー -->
+      <nav id="menu">
+        <ul class="links">
+          <li><a href="index.html">ホーム</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="coffee.html">Coffee Guide</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="burundi.html">About Burundi</a></li>
+          <li><a href="qanda.html">Q&amp;A</a></li>
+        </ul>
+      </nav>
 
-    <!-- メニュー -->
-    <nav id="menu">
-      <ul class="links">
-        <li><a href="index.html">ホーム</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="coffee.html">Coffee Guide</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="burundi.html">About Burundi</a></li>
-        <li><a href="qa.html">Q&amp;A</a></li>
-      </ul>
-    </nav>
-
-    <!-- メインビジュアル -->
-    <section id="banner">
-      <div class="inner">
-        <h1>Ubumwe Coffee</h1>
-        <p>大学生とつくる世界一フェアなコーヒー</p>
-      </div>
-      <!-- 背景画像または動画 -->
-      <img src="images/top.jpg" alt="Top Coffee Image" style="width:100%; height:auto; display:block;" />
-    </section>
-
-    <!-- メイン内容 -->
-    <div id="main" class="alt">
-      <section class="spotlight style1 orient-left content-align-left image-position-center">
-        <div class="content">
-          <h2>Ubumwe Coffeeとは</h2>
-          <p>東海大学の学生が中心となり、ブルンジから仕入れたコーヒー豆を日本で販売し、現地支援と文化交流を進めています。</p>
-          <ul class="actions stacked">
-            <li><a href="about.html" class="button">もっと見る</a></li>
-          </ul>
-        </div>
-        <div class="image">
-          <img src="images/about.jpg" alt="About Image" />
+      <!-- メインビジュアル -->
+      <section id="banner" style="background-color: #f8f8f8; text-align:center; padding:4em 1em;">
+        <div class="inner">
+          <h1 style="color:#5a3e2b; font-size:2.2em; margin-bottom:0.3em;">Ubumwe Coffee</h1>
+          <p style="color:#8b6d4a; font-size:1.1em;">大学生とつくる世界一フェアなコーヒー</p>
+          <img src="images/top.jpg" alt="Top Image" style="width:90%; border-radius:8px; margin-top:1em;">
         </div>
       </section>
+
+      <!-- メイン -->
+      <div id="main" class="alt">
+        <section style="padding:2em;">
+          <h2 style="border-left:5px solid #d75c4a; padding-left:10px; color:#333;">Ubumwe Coffeeとは</h2>
+          <p>
+            東海大学の学生が中心となり、ブルンジから仕入れたコーヒー豆を日本で販売し、現地支援と文化交流を進めています。
+          </p>
+          <ul class="actions">
+            <li><a href="about.html" class="button primary">もっと見る</a></li>
+          </ul>
+          <img src="images/activity1.jpg" alt="Coffee Activity" style="width:100%; border-radius:8px; margin-top:1em;">
+        </section>
+      </div>
+
+      <!-- フッター -->
+      <footer id="footer" style="background-color:#fff; padding:1em 0; text-align:center;">
+        <p class="copyright">&copy; Ubumwe Coffee. All rights reserved.</p>
+      </footer>
     </div>
 
-    <!-- フッター -->
-    <footer id="footer">
-      <p class="copyright">&copy; Ubumwe Coffee. All rights reserved.</p>
-    </footer>
-
-  </div>
-
-  <!-- スクリプト -->
-  <script src="js/jquery.min.js"></script>
-  <script src="js/browser.min.js"></script>
-  <script src="js/breakpoints.min.js"></script>
-  <script src="js/util.js"></script>
-  <script src="js/main.js"></script>
-
-</body>
+    <!-- JS -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/browser.min.js"></script>
+    <script src="js/breakpoints.min.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
